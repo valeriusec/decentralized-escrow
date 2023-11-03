@@ -1,0 +1,10 @@
+{
+  "name": "decentralized-escrow",
+  "dependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^2.0.2",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.9",
+    "@nomicfoundation/hardhat-toolbox": "^3.0.0",
+    "dotenv": "^16.3.1",
+    "ethers": "^6.8.1"
+  }
+}

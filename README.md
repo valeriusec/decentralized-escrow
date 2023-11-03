@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Alchemy University Escrow DApp
+
+This decentralized application (DApp) for Alchemy University facilitates an escrow system, enabling users to initiate and approve transactions involving Ether (ETH) between a depositor, an arbiter, and a beneficiary.
+
+## Description
+
+The Alchemy University Escrow DApp allows users to:
+
+- **Insert Addresses and Amount:**
+  - Provide the addresses for the depositor, arbiter, and beneficiary.
+  - Specify the amount of Ether to be transferred.
+
+- **Approval by Arbiter:**
+  - Initiate the escrow and require approval from the arbiter's wallet.
 
 ## Getting Started
 
-First, run the development server:
+To run this application on your localhost, follow these steps:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. **Clone the Git Repository:**
+   ```bash
+   git clone https://github.com/your-username/alchemy-university-escrow-dapp.git
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. **Install Dependencies:**
+   ```bash
+   npm install
+   cd web3
+   npm install
+   ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. **Compile the Contracts:**
+   ```bash
+   npx hardhat compile
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+4. **Run a Local Blockchain Node:**
+   ```bash
+   npx hardhat node
+   ```
 
-## Learn More
+5. **Connect Wallets to Local Hardhat Addresses:**
+   Choose three addresses from the Hardhat output and connect them to a wallet.
 
-To learn more about Next.js, take a look at the following resources:
+6. **Add Custom Network to Wallet:**
+   Add a custom network in the wallet settings using the following parameters:
+   - **RPC URL:** `http://localhost:8545`
+   - **Chain ID:** `31337`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+7. **Run the Application:**
+   Once the local blockchain is set up, the application should function as expected.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Usage
 
-## Deploy on Vercel
+1. **Insert Addresses and Amount:**
+   - Input the addresses for the arbiter and beneficiary.
+   - Specify the amount of Ether to transfer.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. **Approve Escrow with Arbiter Wallet:**
+   - Initiate the escrow and await approval from the arbiter's wallet.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Troubleshooting
+
+If you encounter any issues, ensure that the dependencies are correctly installed, the local blockchain is running, and the wallet is connected to the custom network (localhost:8545) with the correct chain ID (31337).
